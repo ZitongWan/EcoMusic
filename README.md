@@ -1,2 +1,2 @@
 # Android Studio --- Echo Music
-Use MVVM framework to finish this.
+Use MVVM framework to complete this project.
