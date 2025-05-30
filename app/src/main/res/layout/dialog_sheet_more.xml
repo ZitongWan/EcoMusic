@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="sheetInfo"
+            type="com.xwrl.mvvm.demo.bean.SongSheetBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bottom_round">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_sheet_more_name"
+            android:text="@{sheetInfo.sheetName}"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="18dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/dialog_sheet_more_line"
+            android:src="@color/color99White"
+            android:layout_below="@id/dialog_sheet_more_name"
+            android:layout_marginTop="14dp"
+            android:contentDescription="@string/label_Dialog_line"/>
+
+        <!--下载-->
+        <RelativeLayout
+            android:id="@+id/dialog_sheet_more_rv_download"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/dialog_sheet_more_line"
+            android:paddingTop="12dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/dialog_sheet_more_iv_download"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/label_Dialog_download"
+                android:src="@drawable/iv_download" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/dialog_sheet_more_iv_download"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/dialog_sheet_more_iv_download"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/label_Dialog_download"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <!--分享-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/dialog_sheet_more_rv_share"
+            android:layout_below="@id/dialog_sheet_more_rv_download"
+            android:paddingTop="12dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/dialog_sheet_more_iv_share"
+                android:src="@drawable/iv_share"
+                android:padding="2dp"
+                android:contentDescription="@string/label_Dialog_share"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_Dialog_share"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_alignTop="@id/dialog_sheet_more_iv_share"
+                android:layout_toEndOf="@id/dialog_sheet_more_iv_share"/>
+        </RelativeLayout>
+        <!--编辑-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/dialog_sheet_more_rv_edit"
+            android:layout_below="@id/dialog_sheet_more_rv_share"
+            android:paddingTop="12dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/dialog_sheet_more_iv_edit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/label_Dialog_edit"
+                android:src="@drawable/iv_edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/dialog_sheet_more_iv_edit"
+                android:layout_toEndOf="@id/dialog_sheet_more_iv_edit"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/label_Dialog_edit"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <!--删除-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/dialog_sheet_more_rv_delete"
+            android:layout_below="@id/dialog_sheet_more_rv_edit"
+            android:paddingTop="12dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/dialog_sheet_more_iv_delete"
+                android:src="@drawable/iv_delete"
+                android:contentDescription="@string/label_Dialog_delete"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_Dialog_delete"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignTop="@id/dialog_sheet_more_iv_delete"
+                android:layout_toEndOf="@id/dialog_sheet_more_iv_delete" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

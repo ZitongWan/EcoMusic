@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--@Target(APi 21[5.0])-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="songSheetInfo"
+            type="com.xwrl.mvvm.demo.bean.SongSheetBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_song_sheet_layout"
+        android:layout_marginTop="11dp">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:id="@+id/item_song_sheet_album"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/label_MineFragment_user_icon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_song_sheet_title"
+            android:text="@{songSheetInfo.title,default=@string/label_default_title}"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_toEndOf="@id/item_song_sheet_album"
+            android:layout_toStartOf="@id/item_song_sheet_more"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_song_sheet_count"
+            android:text="@{songSheetInfo.count,default=@string/label_item_music_count}"
+            android:textSize="12sp"
+            android:textColor="@color/color99White"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_alignStart="@id/item_song_sheet_title"
+            android:layout_below="@id/item_song_sheet_title"
+            android:layout_marginTop="2dp"/>
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/item_song_sheet_more"
+            android:src="@drawable/iv_style_leaf_more"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/label_item_more"
+            android:padding="4dp"
+            android:background="?android:selectableItemBackground"/>
+    </RelativeLayout>
+
+</layout>

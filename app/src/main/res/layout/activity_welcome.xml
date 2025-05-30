@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="welcome"
+            type="com.xwrl.mvvm.demo.viewmodel.WelcomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_welcome_root_layout"
+        android:background="@drawable/bg_sea">
+
+        <!--输入用户名-->
+        <RelativeLayout
+            android:id="@+id/activity_welcome_rv_input_user"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".3"
+            android:layout_marginTop="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="21dp">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/activity_welcome_tv_user"
+            android:text="@string/label_WelcomeActivity_user"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_marginStart="15dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:id="@+id/activity_welcome_et_user"
+            android:layout_toEndOf="@id/activity_welcome_tv_user"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:hint="@string/label_WelcomeActivity_hint_user"/>
+
+        </RelativeLayout>
+
+        <!--输入密码-->
+        <RelativeLayout
+            android:id="@+id/activity_welcome_rv_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_welcome_rv_input_user"
+            android:layout_marginTop="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="21dp">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/activity_welcome_tv_password"
+                android:text="@string/label_WelcomeActivity_password"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginStart="15dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:id="@+id/activity_welcome_et_password"
+                android:layout_toEndOf="@id/activity_welcome_tv_password"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:hint="@string/label_WelcomeActivity_hint_password"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:id="@+id/activity_welcome_bt_register"
+            android:hint="@string/label_WelcomeActivity_hint_register"
+            android:textColorHint="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/activity_welcome_rv_input_password"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".18"
+            android:background="@drawable/login_round"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:id="@+id/activity_welcome_bt_login"
+            android:hint="@string/label_WelcomeActivity_hint_login"
+            android:textColorHint="@color/colorBlack"
+            app:layout_constraintTop_toTopOf="@id/activity_welcome_bt_register"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".82"
+            android:background="@drawable/login_round"/>
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:id="@+id/activity_welcome_bt_to_main"
+            android:text="@string/label_WelcomeActivity_to_main"
+            android:textColor="@color/colorCodeGrey"
+            android:gravity="bottom|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/activity_welcome_icon"
+            android:background="@drawable/icon_fate"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@id/activity_welcome_bt_to_main"
+            app:layout_constraintTop_toTopOf="@id/activity_welcome_bt_to_main"
+            app:layout_constraintBottom_toBottomOf="@id/activity_welcome_bt_to_main"
+            android:contentDescription="@string/label_WelcomeActivity_icon"/>
+
+        <TextView
+            android:layout_width="275dp"
+            android:layout_height="100dp"
+            android:text="@string/label_WelcomeActivity_tip_login"
+            android:textColor="@color/colorNightSeaBlueLight"
+            android:gravity="center"
+            android:textSize="77sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@id/activity_welcome_rv_input_user"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

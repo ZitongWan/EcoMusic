@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bottom_round4"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_confirm_message"
+        android:text="@string/label_Dialog_delete_sheet"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:id="@+id/dialog_confirm_confirm"
+        android:text="@string/label_Dialog_confirm"
+        android:textColor="@color/colorGrey"
+        android:textSize="12sp"
+        android:layout_below="@id/dialog_confirm_message"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:id="@+id/dialog_confirm_cancel"
+        android:text="@string/label_Dialog_cancel"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_alignTop="@id/dialog_confirm_confirm"
+        android:layout_toStartOf="@id/dialog_confirm_confirm"
+        android:layout_marginEnd="10dp"
+        android:gravity="center" />
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_play_list_iv_bg"
+            android:background="@drawable/dialog_bottom_round"
+            android:contentDescription="@string/label_Activity_mask"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_play_list_layout"
+            android:paddingTop="16dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="1dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_play_list_tips"
+                android:text="@string/label_default_sheet_cur"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_play_list_count_tips"
+                android:text=""
+                android:textColor="@color/colorBBWhite"
+                android:layout_toEndOf="@id/dialog_play_list_tips"
+                android:layout_alignBottom="@id/dialog_play_list_tips"
+                android:layout_marginBottom="2dp"
+                android:textSize="9sp"/>
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:id="@+id/dialog_play_list_iv_play_mode"
+                android:src="@drawable/iv_playback_mode_order"
+                android:alpha="0.5"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/dialog_play_list_tips"
+                android:contentDescription="@string/label_SongLrcActivity_play_mode_toggle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_play_list_tv_play_mode"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/dialog_play_list_iv_play_mode"
+                android:layout_alignTop="@id/dialog_play_list_iv_play_mode"
+                android:textIsSelectable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_play_list_tv_source"
+                android:textColor="@color/colorGrey"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/dialog_play_list_tips"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_play_list_rv"
+            android:layout_below="@id/dialog_play_list_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="2dp"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_music_list"/>
+
+    </RelativeLayout>
+
+</layout>

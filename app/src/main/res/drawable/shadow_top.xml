@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--作者：知乎用户
+    链接：https://www.zhihu.com/question/37367986/answer/313627366-->
+    <gradient
+        android:angle="270"
+        android:startColor="@color/color50Black"
+        android:endColor="@color/color01Black" />
+</shape>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--更换封面-->
+    <RelativeLayout
+        android:id="@+id/fragment_edit_sheet_rv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/label_Dialog_edit_sheet_cover"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"/>
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/fragment_edit_sheet_iv_cover"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="15dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="@string/label_Dialog_edit_sheet_cover"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:src="@color/color99White"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_sheet_rv_cover"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:contentDescription="@string/label_Dialog_line"/>
+    <!--名称-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_edit_sheet_rv_name"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_sheet_rv_cover"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_Dialog_edit_sheet_name"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_edit_tv_sheet_name"
+            android:text="@string/label_Dialog_edit_sheet_alias"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorGrey"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:background="?android:selectableItemBackground"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:src="@color/color99White"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_sheet_rv_name"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:contentDescription="@string/label_Dialog_line"/>
+    <!--编辑-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_edit_sheet_rv_label"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_sheet_rv_name"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_Dialog_edit_sheet_label"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/label_Dialog_edit_sheet_input_label"
+            android:textSize="14sp"
+            android:textColor="@color/colorGrey"
+            android:gravity="end"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:src="@color/color99White"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_sheet_rv_label"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:contentDescription="@string/label_Dialog_line"/>
+    <!--删除-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_more_option_rv_delete"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_sheet_rv_label"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_Dialog_edit_sheet_describe"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/label_Dialog_edit_sheet_describe_no"
+            android:textSize="14sp"
+            android:textColor="@color/colorGrey"
+            android:gravity="end"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

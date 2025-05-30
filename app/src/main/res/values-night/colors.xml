@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--深色模式适配-->
+    <!--通知消息、xml资源文件等-->
+    <!--深色模式的颜色 要与values文件夹下同名文件同名颜色代码命名保持一次，颜色可不同-->
+    <color name="colorNightBlack">#EEEEEE</color>
+    <color name="colorNightDrawableBlack">#bfbfbf</color>
+    <color name="colorNightWhite">#bfbfbf</color>
+    <color name="colorNightPlayerSeekBarProgress">#aaa</color>
+    <color name="colorNightPlayerSeekBarSecond">#888</color>
+    <color name="colorNightViewBlack">#CDCDCD</color>
+    <color name="colorNightGroundBlack">#60A39D9D</color>
+    <color name="colorNightSearchBlack">#60A39C9C</color>
+    <color name="colorNightBrown">#311111</color>
+
+    <color name="colorDarkBlue">#3F6AAA</color>
+
+    <color name="colorVolumeSetting">#CCEEEEEE</color>
+    <color name="colorNightLoginRoundBgColor">#49EEEEEE</color>
+
+    <!--我的分页-->
+    <color name="colorNightMineFragmentWhite">#EEEEEE</color>
+</resources>

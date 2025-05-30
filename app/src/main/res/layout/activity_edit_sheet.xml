@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <!-- 这里是借用数据绑定中的视图绑定，虽然这个暂时用不到，但还是要写-->
+        <variable
+            name="test"
+            type="com.xwrl.mvvm.demo.viewmodel.MusicViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_edit_sheet_ui_root"
+        android:background="@drawable/bg_sea">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/activity_edit_sheet_csl_top"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorNightSeaBlueBottom">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/activity_edit_sheet_iv_return"
+                android:src="@drawable/iv_return"
+                android:layout_marginStart="8dp"
+                android:padding="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="7dp"
+                android:contentDescription="@string/label_Dialog_return"
+                android:background="?android:selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_edit_sheet_tv_tips"
+                android:text="@string/label_Dialog_edit_sheet"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/activity_edit_sheet_iv_return"
+                app:layout_constraintTop_toTopOf="@id/activity_edit_sheet_iv_return"
+                app:layout_constraintBottom_toBottomOf="@id/activity_edit_sheet_iv_return"
+                android:paddingStart="3dp"
+                android:paddingEnd="6dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_edit_sheet_tv_save"
+                android:text="@string/label_Dialog_edit_sheet_save"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/activity_edit_sheet_iv_return"
+                app:layout_constraintBottom_toBottomOf="@id/activity_edit_sheet_iv_return"
+                android:paddingEnd="15dp"
+                android:paddingStart="0dp"
+                android:background="?android:selectableItemBackground"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/activity_edit_sheet_line"
+            android:src="@color/color50Black"
+            app:layout_constraintTop_toBottomOf="@id/activity_edit_sheet_csl_top"
+            android:background="@drawable/shadow_top"/>
+
+        <!--承载edit编辑页面的fragment-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_edit_sheet_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/interface_fragment_edit">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>
